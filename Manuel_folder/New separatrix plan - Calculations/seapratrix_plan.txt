@@ -1,0 +1,27 @@
+1. No need to delete useless extra lines.
+
+2. Code Eq. 35 of Tanay-Cho-Stein. Gives J5 (fifth action).
+
+3. There is no xi, but rather Seff.L = [(..) S1 + (..) S2].L
+
+4. f1 < f2 < f3. 
+Redo the cubic roots in the trigonometric form. A27.
+Erase (comment out) current implementation of the roots.
+
+5. You may need to write sigma's in terms of m1, m2 since 0 < m_i < infinite (bit too extreme). 
+Also, m1 > m2.
+
+6. delta lambda 5 (dl5): Two notebooks implement it differently. Check the equivalence.
+
+	-- dl4 and dl5 are related by label exchange (1 <--> 2), i.e. dl4(sigma_1/2, S1, S2) --> dl5
+
+If you want to do label exchange in terms of masses, and not sigmas: m1 -> M1 /. m2 -> M2 /. M1 -> m2 /. M2 -> m1.
+
+You may totally choose not to adopt the label exchange route. 
+
+7. Now, we have J5. 
+
+Objective: Find the separatrix (dJ5/d SeffdL (der) = infinity).
+	1/der = 0 ==> Minimize |1/der| and obtain 0 as the minima. Let's do it numerically.
+
+Let's keep m1 > m2, L, S1, S2 fixed. Vary Seff.L, J <==> vary S1.L, S2.L, S1.S2. <==> scan parameters (0 < theta_1/2 < pi, 0 < delta_phi < 2 pi) with L_vec || z-cap. So, minize wrt. theta_1/2, delta_phi.

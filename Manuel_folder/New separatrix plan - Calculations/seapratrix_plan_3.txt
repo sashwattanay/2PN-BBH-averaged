@@ -1,0 +1,36 @@
+0. S1.S2 becomes 
+
+S1 S2 (Sin theta_1 Sin theta_2 Cos(phi_1 - phi_2) + Cos theta_1 Cos theta_2).
+
+You don't deal with delta phi because of a numerical constraint on J.   
+
+With J_num constraint, you get delta_phi from J^2 = L^2 + S1^2 + S2^2 + 2(L.S1 + L.S2 + S1.S2) = J^2_num.   
+
+ >>>>>>
+
+
+5. You may need to write sigma's in terms of m1, m2 since 0 < m_i < infinite (bit too extreme). 
+Also, m1 > m2.  >>>>>>
+
+6. delta lambda 5 (dl5): Two notebooks implement it differently. Check the equivalence.  >>>>
+
+	-- dl4 and dl5 are related by label exchange (1 <--> 2), i.e. dl4(sigma_1/2, S1, S2) --> dl5
+
+If you want to do label exchange in terms of masses, and not sigmas: m1 -> M1 /. m2 -> M2 /. M1 -> m2 /. M2 -> m1.
+
+You may totally choose not to adopt the label exchange route. 
+
+7. Now, we have J5. 
+
+Objective: Find the separatrix (dJ5/d SeffdL (der) = infinity).
+	1/der = 0 ==> Minimize |1/der| and obtain 0 as the minima. Let's do it numerically.
+
+Let's keep m1 > m2, L, S1, S2 fixed. Vary Seff.L, J <==> vary S1.L, S2.L, S1.S2. <==> scan parameters (0 < theta_1/2 < pi, 0 < delta_phi < 2 pi) with L_vec || z-cap. So, minize wrt. theta_1/2, delta_phi.     >>>>>
+
+8. We want to work in "real regime". I hope to find a separatrix when the imaginary part = 0 (could be unidirectional). Need to plot Im[...] too.     >>>>>
+
+9. Objective of the project: (a) bring to forefront again that dJ5/d SeffdL (der) = infinity <==> separatrix (not new knowledge, but new to most of the people) (b) discover a new separateix of spinning BBHs.
+
+==============================
+
+Your J_num is unphysical in the current code. 

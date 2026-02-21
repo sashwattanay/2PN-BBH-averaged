@@ -1,0 +1,55 @@
+What is the parameter space to explore to find the blowup of dJ5/dSeff.L?
+
+Here we take fixed numerical values of L, S1, S2. Align L vector with z axis.
+
+Work with S1.L, S2.L, and S1.S2, instead of constants of motion. 
+
+Now work with the angles theta_1/2 (b/w L, S1, and S2). These 2 angles are 
+can be chosen freely b/w 0 and pi. Now S1.S2 is not free. 
+
+S1.S2 becomes 
+
+S1 S2 (Sin theta_1 Sin theta_2 Cos(phi_1 - phi_2) + Cos theta_1 Cos theta_2).
+
+So there is only one parameter left 0 < (phi_1 - phi_2) < 2 pi.
+
+
+So, we have to explore the 3-dim parameter space if we fix L, S1, S2: 0 < theta_1/2 < pi; 0 < delta phi < 2 pi. The dimension will increase if we want to change L, S1, S2.
+
+
+=============================
+
+ALGORITHM
+
+https://physics.stackexchange.com/questions/258943/dot-product-of-two-vectors-in-spherical-polar-coordinates-do-i-have-to-convert
+
+
+1. L, S1, S2 = 1
+
+2. Choose L_vec = (0,0,1). Not a parameter. Changing it does not change the dot products.
+
+3. any phi_1 = 0. Don't change it. Not a parameter. Changing it does not change the dot products.
+
+4. Choose 0 < theta_1, theta_2 < pi.
+
+5. Choose 0 < delta_phi < 2 pi. Gives you phi_2.
+
+4. S1.S2 = sin() sin() cos() + cos() cos ()
+
+5. (polar) --> Cartesian for S1, S2. Then L.S1, L.S2 (Cartesian: xx+yy+zz).
+
+You have 3 parameters: theta_1, theta_2, delta_phi --> L.S1, L.S2, S1.S2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
